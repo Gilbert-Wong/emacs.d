@@ -31,10 +31,6 @@
 (scroll-bar-mode 0)
 (fringe-mode 0)
 
-;; show line number
-(global-linum-mode t)
-(column-number-mode t)
-
 (setq inhibit-startup-message t)
 
 ;; font config

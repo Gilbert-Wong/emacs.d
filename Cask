@@ -110,3 +110,8 @@
 ;; markdown
 (depends-on "markdown-mode")
 
+;; for erlang
+(depends-on "popup")
+(depends-on "flycheck")
+(depends-on "flycheck-tip")
+(depends-on "company-distel")

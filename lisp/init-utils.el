@@ -2,9 +2,6 @@
 ;;; Commentary: appearance definition
 ;;; author gilbert wong, gilbertwong96@icloud.com
 
-(require 'init-package)
-(require 'init-theme)
-
 (defun hack-emacs ()
   "config file"
   (interactive)
