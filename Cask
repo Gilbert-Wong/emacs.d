@@ -14,13 +14,14 @@
 
 ;; interface
 (depends-on "gruvbox-theme")
+(depends-on "solarized-theme")
 
 ;; indent
 (depends-on "indent-guide")
 (depends-on "aggressive-indent")
 ;; icon
 (depends-on "all-the-icons")
-(depends-on "mode-icons")
+;; (depends-on "mode-icons")
 ;; windows operation
 (depends-on "popwin")
 ;; home page
