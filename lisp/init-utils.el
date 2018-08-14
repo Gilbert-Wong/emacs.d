@@ -15,8 +15,6 @@
   )
 
 
+(global-set-key (kbd "C-M-\\") 'format-buffer)
 (provide 'init-utils)
 ;;; init-utils.el ends here
-
-
-

@@ -22,12 +22,16 @@
   :config
   (indent-guide-global-mode))
 
+(global-auto-revert-mode 1)
+
 (use-package flycheck
   :config
   (global-flycheck-mode t))
 
 (global-aggressive-indent-mode 1)
 
-(provide 'init-better-defaults)
+(setq make-backup-files nil)
+(setq auto-save-default nil)
 
+(provide 'init-better-defaults)
 ;;; init-better-defaults ends here
