@@ -2,7 +2,20 @@
 ;;; Commentary:
 ;;; Code:
 
-;; git 相关
+;; git-gutter.el
+(global-git-gutter-mode +1)
+
+(custom-set-variables
+ '(git-gutter:update-interval 2)
+ '(git-gutter:modified-sign " ") ;; one space
+ '(git-gutter:added-sign "+")    ;; multiple character is OK
+ '(git-gutter:deleted-sign "-"))
+
+(set-face-background 'git-gutter:modified "purple") ;; background color
+(set-face-foreground 'git-gutter:added "green")
+(set-face-foreground 'git-gutter:deleted "red")
+
+;; magit
 (global-set-key (kbd "C-c g c") 'magit-commit)
 (global-set-key (kbd "C-c g p") 'magit-push)
 (global-set-key (kbd "C-c g f") 'magit-pull)

@@ -18,7 +18,7 @@
 (require 'init-erlang)
 (require 'init-linum-mode)
 (require 'init-git)
-(require 'init-github')
+(require 'init-github)
 (require 'init-popwin)
 (require 'init-dictionary)
 (require 'init-bookmark)
