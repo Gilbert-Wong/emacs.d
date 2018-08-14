@@ -1,118 +1,61 @@
-;; source definition
-
 (source gnu)
 (source melpa)
 (source org)
 
-;; package manage
-(depends-on "cask")
-(depends-on "pallet")
-(depends-on "use-package")
-
-;; shortcut
-(depends-on "bind-key")
-
-;; interface
-(depends-on "gruvbox-theme")
-(depends-on "solarized-theme")
-
-;; indent
-(depends-on "indent-guide")
-(depends-on "aggressive-indent")
-;; icon
-(depends-on "all-the-icons")
-;; (depends-on "mode-icons")
-;; windows operation
-(depends-on "popwin")
-;; home page
-(depends-on "init-open-recentf")
-
-;; key prompt
-(depends-on "which-key")
-
-;; file list
-(depends-on "neotree")
-
-;; auto save
-(depends-on "super-save")
-
-;; bookmarks
-(depends-on "bm")
-
-;; enhance dired-mode
-(depends-on "direx")
-
-;; open external apps
-(depends-on "crux")
-
-;; undo
-(depends-on "undo-tree")
-
-;; exec from path
-(depends-on "exec-path-from-shell")
-
-;; editorconfig
-(depends-on "editorconfig")
-;; expand chosen region
-(depends-on "expand-region")
-;; auto add matching parentheses
-(depends-on "smartparens")
-;; highlight parentheses
-(depends-on "highlight-parentheses")
-;; multi-cursor
-(depends-on "iedit")
-
-;; quick operation
-(depends-on "swiper")
-(depends-on "counsel")
-(depends-on "counsel-osx-app")
-
-;; search
-(depends-on "fzf")
-(depends-on "avy")
-(depends-on "ag")
 (depends-on "ace-jump-mode")
-
-
-;; development
-;; intelligent prompt
+(depends-on "ag")
+(depends-on "aggressive-indent")
+(depends-on "all-the-icons")
+(depends-on "avy")
+(depends-on "bind-key")
+(depends-on "bm")
+(depends-on "cask")
 (depends-on "company")
-(depends-on "company-ycmd")
-(depends-on "company-web")
 (depends-on "company-c-headers")
-
-;; code help
+(depends-on "company-distel")
+(depends-on "company-erlang")
+(depends-on "company-web")
+(depends-on "company-ycmd")
+(depends-on "counsel")
+(depends-on "counsel-gtags")
+(depends-on "counsel-osx-app")
+(depends-on "counsel-projectile")
+(depends-on "crux")
 (depends-on "dash-at-point")
-(depends-on "zeal-at-point")
-
-;; code snippet
-(depends-on "yasnippet")
-;; code autojump
-(depends-on "ggtags")
-
-;; git
-(depends-on "magit")
-(depends-on "git-gutter")
-
-
-;; code check
+(depends-on "direx")
+(depends-on "editorconfig")
+(depends-on "emmet-mode")
+(depends-on "exec-path-from-shell")
+(depends-on "expand-region")
+(depends-on "find-file-in-project")
 (depends-on "flycheck")
 (depends-on "flycheck-cask")
-(depends-on "flycheck-ycmd")
-
-;; project manage
-(depends-on "projectile")
-
-;; web
-(depends-on "js2-mode")
-(depends-on "web-mode")
-(depends-on "emmet-mode")
-
-;; markdown
-(depends-on "markdown-mode")
-
-;; for erlang
-(depends-on "popup")
-(depends-on "flycheck")
 (depends-on "flycheck-tip")
-(depends-on "company-distel")
+(depends-on "flycheck-ycmd")
+(depends-on "fzf")
+(depends-on "ggtags")
+(depends-on "git-gutter")
+(depends-on "gruvbox-theme")
+(depends-on "highlight-parentheses")
+(depends-on "iedit")
+(depends-on "indent-guide")
+(depends-on "init-open-recentf")
+(depends-on "ivy-erlang-complete")
+(depends-on "js2-mode")
+(depends-on "magit")
+(depends-on "markdown-mode")
+(depends-on "neotree")
+(depends-on "pallet")
+(depends-on "popup")
+(depends-on "popwin")
+(depends-on "projectile")
+(depends-on "smartparens")
+(depends-on "solarized-theme")
+(depends-on "super-save")
+(depends-on "swiper")
+(depends-on "undo-tree")
+(depends-on "use-package")
+(depends-on "web-mode")
+(depends-on "which-key")
+(depends-on "yasnippet")
+(depends-on "zeal-at-point")

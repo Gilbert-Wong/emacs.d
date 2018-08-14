@@ -1,6 +1,5 @@
-;;; package
+;;; package --- init-package
 ;;; Commentary:
-;;; file emacs
 ;;; author gilbert wong, gilbertwong96@icloud.com
 
 ;;; Code;
@@ -18,3 +17,5 @@
 	     (pallet-mode t))
 
 (provide 'init-package)
+;;; init-package.el ends here
+
