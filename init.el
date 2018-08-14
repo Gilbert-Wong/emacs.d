@@ -18,8 +18,10 @@
 (require 'init-erlang)
 (require 'init-linum-mode)
 (require 'init-git)
+(require 'init-github')
 (require 'init-popwin)
 (require 'init-dictionary)
+(require 'init-bookmark)
 (require 'init-utils)
 
 (when (require 'time-date nil t)
