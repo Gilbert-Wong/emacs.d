@@ -19,7 +19,6 @@
 (require 'init-linum-mode)
 (require 'init-git)
 (require 'init-github)
-(require 'init-popwin)
 (require 'init-dictionary)
 (require 'init-bookmark)
 (require 'init-utils)
