@@ -34,8 +34,12 @@
 
 (global-aggressive-indent-mode 1)
 
+
+;; change save action default
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+(super-save-mode t)
+(setq super-save-auto-save-when-idle t)
 
 
 (use-package dashboard

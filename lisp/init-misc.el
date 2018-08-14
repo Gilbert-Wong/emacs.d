@@ -1,13 +1,9 @@
-
 ;;; package --- misc
 ;;; Commentary:
 ;;; author gilbert wong, gilbertwong96@icloud.com
 ;;; Code:
 
-(if (eq system-type 'darwin)
-    (global-set-key (kbd "C-c b m") 'browse-url-default-macosx-browser))
 (global-set-key (kbd "C-c b f") 'browse-url-firefox)
-(global-set-key (kbd "C-c b c") 'browse-url-chrome)
 
 ;; iedit mode
 (global-set-key (kbd "C-c m u") 'iedit-mode)
@@ -38,6 +34,7 @@
 (smartparens-global-mode t)
 
 (global-undo-tree-mode t)
+
 
 (provide 'init-misc)
 ;;; init-misc.el ends here
