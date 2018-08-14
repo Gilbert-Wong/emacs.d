@@ -4,6 +4,7 @@
                                       ffip-diff-mode
                                       dictionary-mode
                                       erc-mode
+				      dashboard-mode
                                       browse-kill-ring-mode
                                       dired-mode
                                       help-mode

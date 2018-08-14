@@ -1,3 +1,4 @@
+
 ;;; package --- misc
 ;;; Commentary:
 ;;; author gilbert wong, gilbertwong96@icloud.com
@@ -33,6 +34,10 @@
 
 ;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+(smartparens-global-mode t)
+
+(global-undo-tree-mode t)
 
 (provide 'init-misc)
 ;;; init-misc.el ends here

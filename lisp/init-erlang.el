@@ -20,18 +20,18 @@
     )
   )
 
-(use-package ivy-erlang-complete--base
+(use-package ivy-erlang-complete
   :custom
   (ivy-erlang-complete-erlang-root "~/.asdf/installs/erlang/21.0.3/")
   :hook
-  ((erlang-mode . ivy-erlang-complete-init)
-   (erlang-mode . company-erlang-init)
-   (erlang-mode . ivy-erlang-complete-reparse))
+  (progn (erlang-mode . ivy-erlang-complete-init)
+	 (erlang-mode . company-erlang-init)
+	 (erlang-mode . ivy-erlang-complete-reparse))
   :config
-  ((add-to-list 'auto-mode-alist '("rebar\\.config$" . erlang-mode))
-   (add-to-list 'auto-mode-alist '("relx\\.config$" . erlang-mode))
-   (add-to-list 'auto-mode-alist '("system\\.config$" . erlang-mode))
-   (add-to-list 'auto-mode-alist '("\\.app\\.src$" . erlang-mode)))
+  (progn (add-to-list 'auto-mode-alist '("rebar\\.config$" . erlang-mode))
+	 (add-to-list 'auto-mode-alist '("relx\\.config$" . erlang-mode))
+	 (add-to-list 'auto-mode-alist '("system\\.config$" . erlang-mode))
+	 (add-to-list 'auto-mode-alist '("\\.app\\.src$" . erlang-mode)))
   :bind
   (
    ("C-c e d" . 'ivy-erlang-complete-find-definition)

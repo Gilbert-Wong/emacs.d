@@ -2,9 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 
+(setq projectile-enable-caching t)
+
 (global-set-key (kbd "C-c p f") 'counsel-projectile-find-file)
 
-;; (global-set-key (kbd "C-c p p") 'projectile-switch-project)
+(global-set-key (kbd "C-c p p") 'projectile-switch-project)
 
 (global-set-key (kbd "C-c p a") 'counsel-projectile-ag)
 
