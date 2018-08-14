@@ -5,7 +5,11 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("c856158cc996d52e2f48190b02f6b6f26b7a9abd5fea0c6ffca6740a1003b333" default)))
+    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "c856158cc996d52e2f48190b02f6b6f26b7a9abd5fea0c6ffca6740a1003b333" default)))
+ '(git-gutter:added-sign "+")
+ '(git-gutter:deleted-sign "-")
+ '(git-gutter:modified-sign " ")
+ '(git-gutter:update-interval 2)
  '(neo-window-width 30)
  '(package-selected-packages
    (quote

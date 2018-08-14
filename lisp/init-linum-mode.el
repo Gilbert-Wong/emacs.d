@@ -1,3 +1,7 @@
+;;; package --- init-linum-mode
+;;; Commentary:
+;;; Code:
+
 (setq linum-mode-inhibit-modes-list '(eshell-mode
                                       shell-mode
                                       profiler-report-mode
@@ -26,6 +30,7 @@
                                       gnus-group-mode
                                       inf-ruby-mode
                                       gud-mode
+				      neotree-mode
                                       org-mode
                                       vc-git-log-edit-mode
                                       log-edit-mode
@@ -60,3 +65,4 @@
     (run-with-idle-timer 1 nil #'linum-update-current))))
 
 (provide 'init-linum-mode)
+;;; init-linum-mode.el ends here
