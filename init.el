@@ -9,15 +9,19 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-package)
-(require 'init-misc)
 (require 'init-better-defaults)
-(require 'init-theme)
+(require 'init-ui)
+(require 'init-misc)
 (require 'init-ivy)
 (require 'init-projectile)
 (require 'init-company)
 (require 'init-erlang)
 (require 'init-linum-mode)
+(require 'init-git)
+(require 'init-popwin)
+(require 'init-dictionary)
 (require 'init-utils)
+
 (when (require 'time-date nil t)
   (message "Emacs startup time: %f seconds."
            (time-to-seconds (time-since emacs-load-start-time))))

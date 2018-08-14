@@ -12,3 +12,8 @@
 
 # elpa
 elpa/
+
+# other file
+*bookmarks*
+projectile.cache
+recentf
