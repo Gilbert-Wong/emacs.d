@@ -61,4 +61,5 @@
 (depends-on "which-key")
 (depends-on "window-numbering")
 (depends-on "yasnippet")
+(depends-on "youdao-dictionary")
 (depends-on "zeal-at-point")
