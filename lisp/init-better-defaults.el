@@ -32,6 +32,24 @@
   :config
   (global-flycheck-mode t))
 
+
+(smartparens-global-mode t)
+
+(global-undo-tree-mode t)
+
+(add-to-list 'display-buffer-alist
+             `(,(rx bos "*Flycheck errors*" eos)
+               (display-buffer-reuse-window
+		display-buffer-in-side-window)
+               (side            . bottom)
+               (reusable-frames . visible)
+               (window-height   . 0.2))
+
+
+	     )
+
+(add-to-list 'display-buffer-alist '(("\\*undo-tree\\*" display-buffer-below-selected)))
+
 (global-aggressive-indent-mode 1)
 
 
