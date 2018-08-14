@@ -24,6 +24,10 @@
 
 (global-auto-revert-mode 1)
 
+(setq x-select-enable-clipboard t)
+
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (use-package flycheck
   :config
   (global-flycheck-mode t))
@@ -32,6 +36,22 @@
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+
+
+(use-package dashboard
+  :ensure t
+  :config
+  (progn  (dashboard-setup-startup-hook)
+	  (setq dashboard-banner-logo-title "Gilbert Emacs")
+	  (setq dashboard-startup-banner 'logo)
+	  (setq dashboard-items '((recents . 5)
+				  (bookmarks . 5)
+				  (projects . 5)
+				  (agenda . 5)))
+	  )
+  )
+
+(page-break-lines-mode)
 
 (provide 'init-better-defaults)
 ;;; init-better-defaults ends here
