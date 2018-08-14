@@ -36,6 +36,7 @@
 (depends-on "flycheck-ycmd")
 (depends-on "fzf")
 (depends-on "ggtags")
+(depends-on "gist")
 (depends-on "git-gutter")
 (depends-on "gruvbox-theme")
 (depends-on "highlight-parentheses")
