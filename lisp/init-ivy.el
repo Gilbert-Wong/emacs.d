@@ -47,6 +47,7 @@
 
 (global-set-key (kbd "C-c C-b") 'counsel-bookmark)
 
+
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
 (global-set-key (kbd "C-h f") 'counsel-describe-function)

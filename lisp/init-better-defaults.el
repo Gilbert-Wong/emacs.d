@@ -1,3 +1,5 @@
+
+
 ;;; package --- init-better-defaults
 ;;; Commentary:
 ;;; Code:
@@ -44,20 +46,36 @@
                (side            . bottom)
                (reusable-frames . visible)
                (window-height   . 0.2))
-
-
 	     )
 
-(add-to-list 'display-buffer-alist '(("\\*undo-tree\\*" display-buffer-below-selected)))
+;; (add-to-list 'display-buffer-alist
+;; 	     `(,(rx bos "*undo-tree*" eos)
+;; 	       (display-buffer-reuse-window
+;; 		display-buffer-in-side-window)
+;; 	       (side          . right)
+;; 	       (window-height . 0.2)
+;; 	       )
+;; 	     )
 
 (global-aggressive-indent-mode 1)
 
 
 ;; change save action default
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-(super-save-mode t)
-(setq super-save-auto-save-when-idle t)
+
+(use-package super-save
+  :diminish super-save-mode
+  :config
+  (progn
+    (setq make-backup-files nil)
+    (setq auto-save-default nil)
+    (super-save-mode t)
+    (setq super-save-auto-save-when-idle t)
+    )
+  )
+;; (setq make-backup-files nil)
+;; (setq auto-save-default nil)
+;; (super-save-mode t)
+;; (setq super-save-auto-save-when-idle t)
 
 
 (use-package dashboard

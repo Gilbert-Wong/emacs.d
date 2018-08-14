@@ -23,6 +23,7 @@
 (depends-on "crux")
 (depends-on "dash-at-point")
 (depends-on "dashboard")
+(depends-on "diminish")
 (depends-on "direx")
 (depends-on "editorconfig")
 (depends-on "emmet-mode")

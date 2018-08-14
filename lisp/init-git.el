@@ -3,13 +3,25 @@
 ;;; Code:
 
 ;; git-gutter.el
-(global-git-gutter-mode +1)
 
-(custom-set-variables
- '(git-gutter:update-interval 2)
- '(git-gutter:modified-sign " ") ;; one space
- '(git-gutter:added-sign "+")    ;; multiple character is OK
- '(git-gutter:deleted-sign "-"))
+(use-package git-gutter
+  :diminish git-gutter-mode
+  :config
+  (global-git-gutter-mode +1)
+  :custom
+  (git-gutter:update-interval 2)
+  (git-gutter:modified-sign " ")
+  (git-gutter:added-sign "+")
+  (git-gutter:deleted-sign "-")
+  )
+
+
+;; (custom-set-variables
+;;  '(git-gutter:update-interval 2)
+
+;;  '(git-gutter:modified-sign " ") ;; one space
+;;  '(git-gutter:added-sign "+")    ;; multiple character is OK
+;;  '(git-gutter:deleted-sign "-"))
 
 (set-face-background 'git-gutter:modified "purple") ;; background color
 (set-face-foreground 'git-gutter:added "green")
