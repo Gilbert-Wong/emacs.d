@@ -19,3 +19,4 @@ var/
 projectile.cache
 recentf
 eshell/
+.mc-lists.el

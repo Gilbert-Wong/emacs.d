@@ -48,6 +48,7 @@
 (depends-on "js2-mode")
 (depends-on "magit")
 (depends-on "markdown-mode")
+(depends-on "multiple-cursors")
 (depends-on "neotree")
 (depends-on "pallet")
 (depends-on "popup")

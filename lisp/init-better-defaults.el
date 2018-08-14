@@ -1,5 +1,4 @@
 
-
 ;;; package --- init-better-defaults
 ;;; Commentary:
 ;;; Code:
@@ -17,6 +16,18 @@
   (setq exec-path-from-shell-variables '("PATH" "MANPATH" "GOROOT" "GOPATH" "EDITOR" "PYTHONPATH"))
   (setq exec-path-from-shell-check-startup-files nil)
   (setq exec-path-from-shell-arguments '("-l" ))
+  )
+
+
+;; multiple-cursor
+
+(use-package multiple-cursors
+  :diminish multiple-cursors-mode
+  :bind
+  (
+   ("C-c d m" . 'multiple-cursors-mode)
+   ("C-c d e" . 'mc/edit-lines)
+   )
   )
 
 ;; indent line
