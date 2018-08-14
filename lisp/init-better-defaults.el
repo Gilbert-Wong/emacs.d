@@ -5,6 +5,7 @@
 
 ;; editorconfig
 (use-package editorconfig
+  :diminish editorconfig-mode
   :config
   (editorconfig-mode t))
 
@@ -32,6 +33,7 @@
 
 ;; indent line
 (use-package indent-guide
+  :diminish indent-guide-mode
   :config
   (indent-guide-global-mode))
 

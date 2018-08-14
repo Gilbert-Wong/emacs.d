@@ -4,6 +4,7 @@
 ;;; Code:
 
 (use-package highlight-parentheses
+  :diminish highlight-parentheses-mode
   :config
   (global-highlight-parentheses-mode t))
 

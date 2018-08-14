@@ -17,4 +17,4 @@
 (global-set-key (kbd "C-c p g") 'counsel-projectile-grep)
 
 (provide 'init-projectile)
-;;; init-projectile.el ends here
+;;; Init-projectile.el ends here
