@@ -31,9 +31,9 @@
   :custom
   (ivy-erlang-complete-erlang-root "~/.asdf/installs/erlang/21.0.3/")
   :hook
-  (progn (erlang-mode . ivy-erlang-complete-init)
-	 (erlang-mode . company-erlang-init)
-	 (erlang-mode . ivy-erlang-complete-reparse))
+  ((erlang-mode . ivy-erlang-complete-init)
+   (erlang-mode . company-erlang-init)
+   (erlang-mode . ivy-erlang-complete-reparse))
   :config
   (progn (add-to-list 'auto-mode-alist '("rebar\\.config$" . erlang-mode))
 	 (add-to-list 'auto-mode-alist '("relx\\.config$" . erlang-mode))
