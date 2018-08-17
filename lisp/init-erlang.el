@@ -29,7 +29,7 @@
 
 (use-package ivy-erlang-complete
   :custom
-  (ivy-erlang-complete-erlang-root "~/.asdf/installs/erlang/21.0.3/")
+  (ivy-erlang-complete-erlang-root "/usr/local/cellar/erlang/")
   :hook
   ((erlang-mode . ivy-erlang-complete-init)
    (erlang-mode . company-erlang-init)

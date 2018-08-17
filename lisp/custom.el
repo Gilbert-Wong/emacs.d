@@ -13,7 +13,8 @@
  '(neo-window-width 30)
  '(package-selected-packages
    (quote
-    (multiple-cursors diminish flymake-cursor gist youdao-dictionary evil-nerd-commenter dashboard window-numbering counsel-projectile company-erlang ivy-erlang-complete find-file-in-project counsel-gtags swiper zeal-at-point yasnippet which-key web-mode use-package undo-tree super-save solarized-theme smartparens projectile popwin pallet neotree mode-icons markdown-mode magit js2-mode init-open-recentf indent-guide iedit highlight-parentheses gruvbox-theme git-gutter ggtags fzf flycheck-ycmd flycheck-tip flycheck-cask expand-region exec-path-from-shell emmet-mode editorconfig direx dash-at-point crux counsel-osx-app counsel company-ycmd company-web company-distel company-c-headers bm avy all-the-icons aggressive-indent ag ace-jump-mode))))
+    (multiple-cursors diminish flymake-cursor gist youdao-dictionary evil-nerd-commenter dashboard window-numbering counsel-projectile company-erlang ivy-erlang-complete find-file-in-project counsel-gtags swiper zeal-at-point yasnippet which-key web-mode use-package undo-tree super-save solarized-theme smartparens projectile popwin pallet neotree mode-icons markdown-mode magit js2-mode init-open-recentf indent-guide iedit highlight-parentheses gruvbox-theme git-gutter ggtags fzf flycheck-ycmd flycheck-tip flycheck-cask expand-region exec-path-from-shell emmet-mode editorconfig direx dash-at-point crux counsel-osx-app counsel company-ycmd company-web company-distel company-c-headers bm avy all-the-icons aggressive-indent ag ace-jump-mode)))
+ '(safe-local-variable-values (quote ((allout-layout . t)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
