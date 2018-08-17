@@ -3,7 +3,7 @@
 ;;; Code:
 ;;; author gilbert wong, gilbertwong96@icloud.com
 
-(setq gc-cons-threshold most-positive-fixnum)
+(setq gc-cons-threshold (* 1000 1024 1024))
 
 (setq emacs-load-start-time (current-time))
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -21,6 +21,7 @@
 (require 'init-github)
 (require 'init-dictionary)
 (require 'init-bookmark)
+(require 'init-markdown)
 (require 'init-utils)
 
 (when (require 'time-date nil t)
