@@ -12,9 +12,7 @@
   :config
   (mode-icons-mode t))
 
-  (use-package popwin
-    :config
-    (popwin-mode t))
+(use-package popwin)
 
 (use-package gruvbox-theme)
 
@@ -38,8 +36,14 @@
 
 (setq inhibit-startup-message t)
 
+;; (setq default-frame-scroll-bars 0)
 ;; font config
-(set-default-font "Inziu Iosevka SC 16")
+;; (set-default-font "Inziu Iosevka SC 16")
+;; (setq default-frame-alist '((font . "Inziu Iosevka SC 16")))
+(add-to-list 'default-frame-alist '((vertical-scroll-bars . nil)
+				    (font . "Inziu Iosevka SC 16")))
+
+
 
 (provide 'init-ui)
-;;; init-theme.el ends here
+;;; init-ui.el ends here
