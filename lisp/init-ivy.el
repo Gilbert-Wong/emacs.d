@@ -10,6 +10,8 @@
 
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 
+(global-set-key (kbd "C-c r f") 'counsel-recentf)
+
 (global-set-key (kbd "C-c f z f") 'counsel-fzf)
 
 (global-set-key (kbd "C-s") 'swiper)
