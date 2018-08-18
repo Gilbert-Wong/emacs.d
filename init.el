@@ -28,7 +28,24 @@
   (message "Emacs startup time: %f seconds."
            (time-to-seconds (time-since emacs-load-start-time))))
 
+(server-start)
+
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
+
+(setq gc-max (* 500 1024 1024))
+(setq gc-min (* 200 1024 1024))
+
+(setq gc-cons-threshold gc-min)
+
+(defun minibuffer-setup-hook-for-gc ()
+  "Make minibuffer trigger gc start."
+  (setq gc-cons-threshold gc-max))
+(defun minibuffer-exit-hook-for-gc ()
+  "Make minibuffer trigger gc start."
+  (setq gc-cons-threshold gc-min))
+
+(add-hook 'minibuffer-setup-hook #'minibuffer-setup-hook-for-gc)
+(add-hook 'minibuffer-exit-hook #'minibuffer-exit-hook-for-gc)
 
 (load-file custom-file)
 ;;; init.el ends here
