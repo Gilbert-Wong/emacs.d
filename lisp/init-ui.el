@@ -38,10 +38,11 @@
 
 ;; (setq default-frame-scroll-bars 0)
 ;; font config
-;; (set-default-font "Inziu Iosevka SC 16")
-;; (setq default-frame-alist '((font . "Inziu Iosevka SC 16")))
-(add-to-list 'default-frame-alist '((vertical-scroll-bars . nil)
-				    (font . "Inziu Iosevka SC 16")))
+(set-frame-font "Inziu Iosevka SC 16")
+;;(setq default-frame-alist '((font . "Inziu Iosevka SC 16")))
+(add-to-list 'default-frame-alist '(vertical-scroll-bars . nil))
+(add-to-list 'default-frame-alist '(font . "Inziu Iosevka SC 16"))
+;; (font . "Inziu Iosevka SC 16")
 
 
 
