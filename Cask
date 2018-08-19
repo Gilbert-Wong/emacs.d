@@ -27,6 +27,7 @@
 (depends-on "direx")
 (depends-on "editorconfig")
 (depends-on "emmet-mode")
+(depends-on "erlang")
 (depends-on "evil-nerd-commenter")
 (depends-on "exec-path-from-shell")
 (depends-on "expand-region")

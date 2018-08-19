@@ -3,6 +3,10 @@
 ;;; Commentary:
 ;;; Code:
 
+(setq-default indent-tabs-mode nil)
+
+(setq-default tab-width 4)
+
 ;; editorconfig
 (use-package editorconfig
   :diminish editorconfig-mode
