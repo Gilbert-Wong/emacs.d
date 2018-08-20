@@ -32,8 +32,8 @@
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
-(setq gc-max (* 500 1024 1024))
-(setq gc-min (* 200 1024 1024))
+(setq gc-max (* 600 1024 1024))
+(setq gc-min (* 400 1024 1024))
 
 (setq gc-cons-threshold gc-min)
 

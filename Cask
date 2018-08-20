@@ -42,6 +42,7 @@
 (depends-on "git-gutter")
 (depends-on "gruvbox-theme")
 (depends-on "highlight-parentheses")
+(depends-on "hungry-delete")
 (depends-on "iedit")
 (depends-on "indent-guide")
 (depends-on "init-open-recentf")

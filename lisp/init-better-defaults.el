@@ -24,6 +24,12 @@
   )
 
 
+;; hungry-delete
+(use-package hungry-delete
+  :config
+  (global-hungry-delete-mode)
+  )
+
 ;; multiple-cursor
 
 (use-package multiple-cursors
@@ -74,7 +80,7 @@
 ;; 	       )
 ;; 	     )
 
-(global-aggressive-indent-mode 1)
+;; (global-aggressive-indent-mode 1)
 
 
 ;; change save action default
