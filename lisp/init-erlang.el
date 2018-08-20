@@ -30,10 +30,6 @@
 (use-package ivy-erlang-complete
   :custom
   (ivy-erlang-complete-erlang-root "/usr/local/cellar/erlang/")
-  :hook
-  ((erlang-mode . ivy-erlang-complete-init)
-   (erlang-mode . company-erlang-init)
-   (after-save . ivy-erlang-complete-reparse))
   :config
   (progn (add-to-list 'auto-mode-alist '("rebar\\.config$" . erlang-mode))
 	     (add-to-list 'auto-mode-alist '("relx\\.config$" . erlang-mode))
@@ -47,6 +43,10 @@
    ("C-c e p" . 'ivy-erlang-complete-set-project-root)
    ("C-c e a" . 'ivy-erlang-complete-autosetup-project-root)
    )
+  :init
+  (add-hook 'erlang-mode-hook #'ivy-erlang-complete-init)
+  (add-hook 'after-save-hook #'ivy-erlang-complete-reparse)
+  (add-hook 'erlang-mode-hook #'company-erlang-init)
   )
 
 (provide 'init-erlang)
