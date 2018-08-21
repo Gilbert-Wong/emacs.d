@@ -1,3 +1,4 @@
+
 ;;; package --- init-ui
 ;;; Commentary:
 ;;; author gilbert wong, gilbertwong96@icloud.com
@@ -14,12 +15,15 @@
 
 (use-package popwin)
 
-(use-package gruvbox-theme)
 
-;; (use-package solarized-theme)
+(use-package solarized-theme
+  :ensure t
+  :init
+   (load-theme 'solarized-light t)
+  )
 
 ;; set cursor color in dark theme
-(set-cursor-color "White")
+;; (set-cursor-color "White")
 (setq-default cursor-type 'bar)
 
 ;; show column number

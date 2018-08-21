@@ -8,7 +8,7 @@
                                       ffip-diff-mode
                                       dictionary-mode
                                       erc-mode
-				      dashboard-mode
+				                      dashboard-mode
                                       browse-kill-ring-mode
                                       dired-mode
                                       help-mode
@@ -30,7 +30,7 @@
                                       gnus-group-mode
                                       inf-ruby-mode
                                       gud-mode
-				      neotree-mode
+                                      neotree-mode
                                       org-mode
                                       vc-git-log-edit-mode
                                       log-edit-mode
