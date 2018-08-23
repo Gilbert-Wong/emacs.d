@@ -1,4 +1,3 @@
-
 ;;; package --- init-ui
 ;;; Commentary:
 ;;; author gilbert wong, gilbertwong96@icloud.com
@@ -32,11 +31,11 @@
 
 ;; hide tool bar
 (if window-system
-    (tool-bar-mode 0))
+    (tool-bar-mode -1))
 
 ;; hide scroll bar
-(scroll-bar-mode 0)
-(fringe-mode 0)
+(scroll-bar-mode -1)
+(fringe-mode -1)
 
 (setq inhibit-startup-message t)
 
