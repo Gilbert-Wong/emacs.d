@@ -1,4 +1,3 @@
-
 ;;; package --- init-better-defaults
 ;;; Commentary:
 ;;; Code:
@@ -21,6 +20,12 @@
   (setq exec-path-from-shell-variables '("PATH" "MANPATH" "GOROOT" "GOPATH" "EDITOR" "PYTHONPATH"))
   (setq exec-path-from-shell-check-startup-files nil)
   (setq exec-path-from-shell-arguments '("-l" ))
+  )
+
+;; imenu-list
+(use-package imenu-list
+  :bind
+  ("C-'" . 'imenu-list-smart-toggle)
   )
 
 
