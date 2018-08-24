@@ -22,6 +22,14 @@
   (setq exec-path-from-shell-arguments '("-l" ))
   )
 
+;; ansi-term
+(defun open-localhost ()
+      (interactive)
+      (ansi-term "zsh" "localhost"))
+
+(global-set-key (kbd "C-c C-t") 'open-localhostq)
+
+
 ;; imenu-list
 (use-package imenu-list
   :bind
