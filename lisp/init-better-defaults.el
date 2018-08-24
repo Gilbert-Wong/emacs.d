@@ -26,6 +26,8 @@
 (use-package imenu-list
   :bind
   ("C-'" . 'imenu-list-smart-toggle)
+  :custom
+  (imenu-list-auto-resize t)
   )
 
 
