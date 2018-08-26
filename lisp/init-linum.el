@@ -38,6 +38,7 @@
                                       speedbar-mode
                                       gnus-summary-mode
                                       gnus-article-mode
+                                      magit-mode
                                       calendar-mode
                                       imenu-list-major-mode))
 
@@ -65,5 +66,5 @@
   (defadvice linum-schedule (around my-linum-schedule () activate)
     (run-with-idle-timer 1 nil #'linum-update-current))))
 
-(provide 'init-linum-mode)
-;;; init-linum-mode.el ends here
+(provide 'init-linum)
+;;; init-linum.el ends here

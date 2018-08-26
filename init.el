@@ -16,7 +16,7 @@
 (require 'init-projectile)
 (require 'init-company)
 (require 'init-erlang)
-(require 'init-linum-mode)
+(require 'init-linum)
 (require 'init-git)
 (require 'init-github)
 (require 'init-dictionary)
