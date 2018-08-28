@@ -5,6 +5,7 @@
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 (use-package flyspell
+  :diminish flyspell-mode
   :bind
   (("C-;" . flyspell-mode))
   )
