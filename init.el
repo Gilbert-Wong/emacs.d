@@ -10,6 +10,7 @@
 
 (require 'init-package)
 (require 'init-better-defaults)
+(require 'init-flyspell)
 (require 'init-ui)
 (require 'init-misc)
 (require 'init-ivy)
