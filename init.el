@@ -24,6 +24,7 @@
 (require 'init-bookmark)
 (require 'init-markdown)
 (require 'init-utils)
+(require 'init-extensions)
 
 (when (require 'time-date nil t)
   (message "Emacs startup time: %f seconds."
