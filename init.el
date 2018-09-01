@@ -6,7 +6,7 @@
 (setq gc-cons-threshold (* 1000 1024 1024))
 
 (setq emacs-load-start-time (current-time))
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/config" user-emacs-directory))
 
 (require 'init-package)
 (require 'init-better-defaults)
