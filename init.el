@@ -28,6 +28,7 @@
 (require 'init-paredit)
 (require 'init-scheme)
 (require 'init-helm)
+(require 'init-editorconfig)
 
 (when (require 'time-date nil t)
   (message "Emacs startup time: %f seconds."
