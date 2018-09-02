@@ -42,6 +42,7 @@
 (depends-on "gist")
 (depends-on "git-gutter")
 (depends-on "gruvbox-theme")
+(depends-on "helm-make")
 (depends-on "highlight-parentheses")
 (depends-on "hungry-delete")
 (depends-on "iedit")
