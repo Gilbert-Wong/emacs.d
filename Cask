@@ -57,6 +57,7 @@
 (depends-on "multiple-cursors")
 (depends-on "neotree")
 (depends-on "pallet")
+(depends-on "paredit")
 (depends-on "popup")
 (depends-on "popwin")
 (depends-on "projectile")
