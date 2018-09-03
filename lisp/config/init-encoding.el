@@ -24,5 +24,5 @@
 
 (prefer-coding-system 'utf-8)
 
-(provide 'init-company)
+(provide 'init-encoding)
 ;;; init-encoding.el ends here
