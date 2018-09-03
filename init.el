@@ -29,6 +29,7 @@
 (require 'init-scheme)
 (require 'init-helm)
 (require 'init-editorconfig)
+(require 'init-encoding)
 
 (when (require 'time-date nil t)
   (message "Emacs startup time: %f seconds."

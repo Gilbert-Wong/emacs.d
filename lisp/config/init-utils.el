@@ -14,9 +14,18 @@
   (indent-region (point-min) (point-max) nil)
   )
 
+(defun spacemacs/dos2unix ()
+  "Convert the current buffer to UNIX file format."
+  (interactive)
+  (set-buffer-file-coding-system 'undecided-unix nil))
+
+(defun spacemacs/unix2dos ()
+  "Convert the current buffer to DOS file format."
+  (interactive)
+  (set-buffer-file-coding-system 'undecided-dos nil))
 
 (defun mac-switch-meta nil
-  "switch meta between Option and Command"
+  "Switch meta between Option and Command."
   (interactive)
   (if (eq mac-option-modifier nil)
       (progn
