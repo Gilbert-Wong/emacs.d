@@ -10,8 +10,6 @@
  '(git-gutter:deleted-sign "-")
  '(git-gutter:modified-sign " ")
  '(git-gutter:update-interval 2)
- '(helm-make-fuzzy-matching t)
- '(helm-make-list-target-method (quote qp))
  '(imenu-list-auto-resize t)
  '(ivy-erlang-complete-erlang-root "/usr/local/cellar/erlang/")
  '(neo-window-fixed-size nil)

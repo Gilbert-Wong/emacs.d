@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(use-package helm-make)
+
 (global-set-key (kbd "C-c h m") 'helm-make)
 
 (global-set-key (kbd "C-c h p") 'helm-make-projectile)

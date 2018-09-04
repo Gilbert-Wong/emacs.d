@@ -18,7 +18,7 @@
 (use-package solarized-theme
   :ensure t
   :init
-   (load-theme 'solarized-dark t)
+   (load-theme 'solarized-light t)
   )
 
 ;; set cursor color in dark theme
