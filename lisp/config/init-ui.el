@@ -3,6 +3,8 @@
 ;;; author gilbert wong, gilbertwong96@icloud.com
 ;;; Code:
 
+(global-hl-line-mode t)
+
 (use-package highlight-parentheses
   :diminish highlight-parentheses-mode
   :config
@@ -41,13 +43,11 @@
 
 ;; (setq default-frame-scroll-bars 0)
 ;; font config
-(set-frame-font "Inziu Iosevka SC 16")
+(set-frame-font "Inziu Iosevka SC 18")
 ;;(setq default-frame-alist '((font . "Inziu Iosevka SC 16")))
 (add-to-list 'default-frame-alist '(vertical-scroll-bars . nil))
 (add-to-list 'default-frame-alist '(font . "Inziu Iosevka SC 16"))
 ;; (font . "Inziu Iosevka SC 16")
-
-
 
 (provide 'init-ui)
 ;;; init-ui.el ends here
