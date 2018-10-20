@@ -1,3 +1,4 @@
+
 ;;; package --- init
 ;;; Commentary:
 ;;; Code:
@@ -37,6 +38,8 @@
   (message "Emacs startup time: %f seconds."
            (time-to-seconds (time-since emacs-load-start-time))))
 
+(server-force-delete)
+;; Start Emacs server
 (server-start)
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
