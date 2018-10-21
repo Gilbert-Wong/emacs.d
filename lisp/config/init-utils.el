@@ -14,17 +14,17 @@
   (indent-region (point-min) (point-max) nil)
   )
 
-(defun spacemacs/dos2unix ()
+(defun gilbert/dos2unix ()
   "Convert the current buffer to UNIX file format."
   (interactive)
   (set-buffer-file-coding-system 'undecided-unix nil))
 
-(defun spacemacs/unix2dos ()
+(defun gilbert/unix2dos ()
   "Convert the current buffer to DOS file format."
   (interactive)
   (set-buffer-file-coding-system 'undecided-dos nil))
 
-(defun mac-switch-meta nil
+(defun gilbert/mac-switch-meta nil
   "Switch meta between Option and Command."
   (interactive)
   (if (eq mac-option-modifier nil)
@@ -39,7 +39,7 @@
     )
   )
 
-(defun open-in-external-app ()
+(defun gilbert/open-in-external-app ()
   "Open the current file or dired marked files in external app.
 The app is chosen from your OS's preference."
   (interactive)
@@ -67,7 +67,7 @@ The app is chosen from your OS's preference."
          (lambda ($fpath) (let ((process-connection-type nil))
                             (start-process "" nil "xdg-open" $fpath))) $file-list))))))
 
-(defun show-in-desktop()
+(defun gilbert/show-in-desktop()
   "Show current file in desktop.
  (Mac Finder, Windows Explorer, Linux file manager)
  This command can be called when in a file or in `dired'."
@@ -96,7 +96,7 @@ The app is chosen from your OS's preference."
       ;; (shell-command "xdg-open .") ;; 2013-02-10 this sometimes froze emacs till the folder is closed. eg with nautilus
       ))))
 
-(defun open-in-terminal()
+(defun gilbert/open-in-terminal()
   "Open the current dir in a new terminal window."
   (interactive)
   (cond
@@ -111,7 +111,7 @@ The app is chosen from your OS's preference."
                      (concat "--working-directory=" default-directory))))))
 
 
-(defun open-in-textedit()
+(defun gilbert/open-in-textedit()
   (interactive)
   (let* (
          ($file-list
@@ -130,7 +130,7 @@ The app is chosen from your OS's preference."
             (format "open -a TextEdit.app \"%s\"" $fpath))) $file-list))))))
 
 
-(defun open-in-chrome()
+(defun gilbert/open-in-chrome()
   "Open the current file or `dired' marked files in Mac's chrome browser."
   (interactive)
   (let* (
@@ -149,10 +149,10 @@ The app is chosen from your OS's preference."
            (when (buffer-modified-p )
              (save-buffer))
            (shell-command
-            (format "open -a Google\ Chrome.app \"%s\"" $fpath))) $file-list)))))
+            (format "open -a Firefox.app \"%s\"" $fpath))) $file-list)))))
   )
 
-(defun copy-file-path (&optional @dir-path-only-p)
+(defun gilbert/copy-file-path (&optional @dir-path-only-p)
   "Copy the current buffer's file path or dired path to `kill-ring'.
 Result is full path.
 If `universal-argument' is called first, copy only the dir path.
@@ -181,25 +181,25 @@ If a buffer is not file and not dired, copy value of `default-directory' (which 
          (message "File path copied: 「%s」" $fpath)
          $fpath )))))
 
-(defun cleanup-recentf ()
+(defun gilbert/cleanup-recentf ()
   (progn
     (and (fboundp 'recentf-cleanup)
          (recentf-cleanup))))
 
-(defun hidden-dos-eol ()
+(defun gilbert/hidden-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
   (interactive)
   (setq buffer-display-table (make-display-table))
   (aset buffer-display-table ?\^M []))
 
-(defun remove-dos-eol ()
+(defun gilbert/remove-dos-eol ()
   "Replace DOS eolns CR LF with Unix eolns CR"
   (interactive)
   (goto-char (point-min))
   (while (search-forward "\r" nil t) (replace-match "")))
 
 
-(defun word-count-for-chinese ()
+(defun gilbert/word-count-for-chinese ()
 
   "「较准确地」统计中/日/英文字数。
 - 文章中的注解不算在字数内。
@@ -247,23 +247,33 @@ If a buffer is not file and not dired, copy value of `default-directory' (which 
              chinese-char chinese-char-and-punc english-word
              (+ chinese-char english-word)))))
 
-(defun show-current-buffer-major-mode ()
+(defun gilbert/show-current-buffer-major-mode ()
   (interactive)
   (describe-variable 'major-mode))
 
 ;; reformat your json file, it requires python
-(defun beautify-json ()
+(defun gilbert/beautify-json ()
   (interactive)
   (let ((b (if mark-active (min (point) (mark)) (point-min)))
         (e (if mark-active (max (point) (mark)) (point-max))))
     (shell-command-on-region b e
                              "python -mjson.tool" (current-buffer) t)))
-(defun remove-semicolon-eol ()
+
+(defun gilbert/remove-semicolon-eol ()
   "remove semicolons in javascript"
   (interactive)
   (goto-char (point-min))
   (while (search-forward ";" nil t) (replace-match "")))
 
+(defun gilbert/add-hook (hooks funcs &optional append local)
+  "More general definition of function add-hook."
+  (unless (listp hooks)
+    (setq hooks (list hooks)))
+  (unless (listp funcs)
+    (setq funcs (list funcs)))
+  (dolist (hook hooks)
+    (dolist (func funcs)
+      (add-hook hook func append local))))
 
 (global-set-key (kbd "C-M-\\") 'format-buffer)
 (provide 'init-utils)

@@ -3,53 +3,62 @@
 ;;; Code:
 
 (require 'cmuscheme)
-(setq scheme-program-name "racket")         ;; 如果用 Petite 就改成 "petite"
 
-;; bypass the interactive question and start the default interpreter
-(defun scheme-proc ()
-  "Return the current Scheme process, starting one if necessary."
-  (unless (and scheme-buffer
-               (get-buffer scheme-buffer)
-               (comint-check-proc scheme-buffer))
-    (save-window-excursion
-      (run-scheme scheme-program-name)))
-  (or (scheme-get-process)
-      (error "No current process. See variable `scheme-buffer'")))
+(setq scheme-program-name "chez")         ;; if use mit-scheme then "scheme"
+(setq geiser-chez-binary "chez")
 
+(setq geiser-active-implementations '(chez))
 
-(defun scheme-split-window ()
-  (cond
-   ((= 1 (count-windows))
-    (delete-other-windows)
-    (split-window-vertically (floor (* 0.68 (window-height))))
-    (other-window 1)
-    (switch-to-buffer "*scheme*")
-    (other-window 1))
-   ((not (find "*scheme*"
-               (mapcar (lambda (w) (buffer-name (window-buffer w)))
-                       (window-list))
-               :test 'equal))
-    (other-window 1)
-    (switch-to-buffer "*scheme*")
-    (other-window -1))))
+(setq geiser-mode-eval-last-sexp-to-buffer t)
+
+(setq geiser-mode-eval-to-buffer-prefix "\n;;=> ")
+
+(setq geiser-mode-start-repl-p t)
 
 
-(defun scheme-send-last-sexp-split-window ()
-  (interactive)
-  (scheme-split-window)
-  (scheme-send-last-sexp))
+;; (defun gilbert/get-scheme-proc-create ()
+;;   "Create one scheme process if no one is created."
+;;   (unless (and scheme-buffer
+;;                (get-buffer scheme-buffer)
+;;                (comint-check-proc scheme-buffer))
+;;     (save-window-excursion
+;;       (run-scheme scheme-program-name))))
 
+;; (defun gilbert/scheme-send-last-sexp ()
+;;   "A replacement of original `scheme-send-last-sexp`:
+;; 1. check if scheme process exists, otherwise create one
+;; 2. make sure the frame is splitted into two windows, current 
+;; one is the scheme source code window, the other one is the 
+;; scheme process window
+;; 3. run `scheme-send-last-sexp`
+;;   PS: this function is copied from kelvin and inspired by Wang Yin."
+;;   (interactive)
+;;   (gilbert/get-scheme-proc-create)
+;;   (cond ((= 2 (count-windows))
+;;          (other-window 1)
+;;          (unless (string= (buffer-name)
+;;                           scheme-buffer)
+;;            (switch-to-buffer scheme-buffer))
+;;          (other-window 1))
+;;         (t
+;;          (delete-other-windows)
+;;          (split-window-vertically (floor (* 0.68 (windows-height))))
+;;          (other-window 1)
+;;          (switch-to-buffer scheme-buffer)
+;;          (other-window 1)))
+;;   (scheme-send-last-sexp))
 
-(defun scheme-send-definition-split-window ()
-  (interactive)
-  (scheme-split-window)
-  (scheme-send-definition))
+;; (setq scheme-program-name "chez-scheme")
 
-(add-hook 'scheme-mode-hook
-  (lambda ()
-    (paredit-mode 1)
-    (define-key scheme-mode-map (kbd "C-c s e") 'scheme-send-last-sexp-split-window)
-    (define-key scheme-mode-map (kbd "C-c s d") 'scheme-send-definition-split-window)))
+;; (gilbert/add-hook '(scheme-mode-hook)
+;;                   '((lambda ()
+;;                       (local-set-key (kbd "C-x C-e") 'gilbert/scheme-send-last-sexp))))
+
+;; (add-hook 'scheme-mode-hook
+;;   (lambda ()
+;;     (paredit-mode 1)
+;;     (define-key scheme-mode-map (kbd "C-c s e") 'scheme-send-last-sexp-split-window)
+;;     (define-key scheme-mode-map (kbd "C-c s d") 'scheme-send-definition-split-window)))
 
 (provide 'init-scheme)
 ;;; init-scheme.el ends here
