@@ -25,6 +25,21 @@
 ;;           (lambda ()
 ;;             (flycheck-select-checker 'erlang-otp)
 ;;             (flycheck-mode)))
+(use-package indy
+  :ensure t
+  :config
+  (setq indy-rules '(
+                     (erlang-mode . (
+                                     ((and (indy--current 'indy--starts-with "end")
+                                           (indy--prev 'indy--ends-on ") ->"))
+                                      (indy--prev-tab))
+                                     ((indy--current 'indy--starts-with "end") (indy--prev-tab -1))
+                                     ((indy--prev 'indy--ends-on ") ->")       (indy--prev-tab 1))
+                                     ((indy--current 'indy--starts-with "]")   (indy--prev-tab -1))
+                                     ((indy--prev 'indy--ends-on "[")          (indy--prev-tab 1))
+                                     ((indy--prev 'indy--ends-on ",")          (indy--prev-tab))
+                                     ))
+                     )))
 
 
 (use-package ivy-erlang-complete

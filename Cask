@@ -54,7 +54,7 @@
 (depends-on "iedit")
 (depends-on "imenu-list")
 (depends-on "indent-guide")
-(depends-on "indy")
+(depends-on "indy" :git "https://github.com/Gilbert-Wong/indy.git")
 (depends-on "init-open-recentf")
 (depends-on "ivy")
 (depends-on "ivy-erlang-complete")
