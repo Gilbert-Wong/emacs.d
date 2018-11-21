@@ -122,7 +122,7 @@
   :config
   (progn  (dashboard-setup-startup-hook)
 	  (setq dashboard-banner-logo-title "Gilbert Emacs")
-	  (setq dashboard-startup-banner "~/Pictures/Avatar.png")
+	  (setq dashboard-startup-banner "~/.emacs.d/avatar.png")
 	  (setq dashboard-items '((recents . 5)
 				  (bookmarks . 5)
 				  (projects . 5)
