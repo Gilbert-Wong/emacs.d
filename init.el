@@ -26,7 +26,6 @@
 (require 'init-markdown)
 (require 'init-utils)
 (require 'init-extensions)
-(require 'init-paredit)
 (require 'init-scheme)
 (require 'init-helm)
 (require 'init-editorconfig)

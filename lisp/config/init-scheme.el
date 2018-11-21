@@ -56,7 +56,6 @@
 
 ;; (add-hook 'scheme-mode-hook
 ;;   (lambda ()
-;;     (paredit-mode 1)
 ;;     (define-key scheme-mode-map (kbd "C-c s e") 'scheme-send-last-sexp-split-window)
 ;;     (define-key scheme-mode-map (kbd "C-c s d") 'scheme-send-definition-split-window)))
 
