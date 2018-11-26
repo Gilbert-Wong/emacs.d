@@ -54,7 +54,6 @@
 (depends-on "hungry-delete")
 (depends-on "iedit")
 (depends-on "imenu-list")
-(depends-on "indent-guide")
 (depends-on "init-open-recentf")
 (depends-on "ivy")
 (depends-on "ivy-erlang-complete")

@@ -57,12 +57,6 @@
    )
   )
 
-;; indent line
-(use-package indent-guide
-  :diminish indent-guide-mode
-  :config
-  (indent-guide-global-mode))
-
 (global-auto-revert-mode 1)
 
 (setq x-select-enable-clipboard t)
