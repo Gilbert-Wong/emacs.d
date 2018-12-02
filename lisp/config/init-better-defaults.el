@@ -46,17 +46,6 @@
   (global-hungry-delete-mode)
   )
 
-;; multiple-cursor
-
-(use-package multiple-cursors
-  :diminish multiple-cursors-mode
-  :bind
-  (
-   ("C-c d m" . 'multiple-cursors-mode)
-   ("C-c d e" . 'mc/edit-lines)
-   )
-  )
-
 (global-auto-revert-mode 1)
 
 (setq x-select-enable-clipboard t)
@@ -125,7 +114,7 @@
 	  )
   )
 
-(page-break-lines-mode)
+(global-page-break-lines-mode)
 
 (provide 'init-better-defaults)
 ;;; init-better-defaults ends here

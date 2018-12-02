@@ -14,6 +14,7 @@
 (require 'init-flyspell)
 (require 'init-ui)
 (require 'init-misc)
+(require 'init-haskell)
 (require 'init-ivy)
 (require 'init-projectile)
 (require 'init-company)
