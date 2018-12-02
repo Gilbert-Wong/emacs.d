@@ -1,2 +1,5 @@
-# emacs.d
-My personal Emacs Config project (aim to escape from spacemacs)
+# Usage
+```
+git clone https://github.com/Gilbert-Wong/emacs.d/ ~/.emacs.d
+cask install
+```
