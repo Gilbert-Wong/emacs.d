@@ -8,6 +8,9 @@
 ;; iedit mode
 (global-set-key (kbd "C-c m u") 'iedit-mode)
 
+;; cua-mode
+(global-set-key (kbd "C-c m c") 'cua-mode)
+
 ;; neotree
 (use-package neotree
   :bind
@@ -19,6 +22,7 @@
 
 ;; window-numbering
 (window-numbering-mode t)
+
 (setq window-numbering-assign-func
       (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
 

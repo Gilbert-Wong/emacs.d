@@ -40,6 +40,7 @@
 (global-set-key (kbd "C-c g r") 'magit-rebase)
 (global-set-key (kbd "C-c g v") 'magit-revert)
 (global-set-key (kbd "C-c g e") 'magit-rebase)
+(global-set-key (kbd "C-c g g") 'magit-blame)
 
 (provide 'init-git)
 ;;; init-git.el ends here
