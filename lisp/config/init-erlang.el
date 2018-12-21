@@ -6,42 +6,6 @@
 
 (require 'erlang-start)
 
-;; (use-package flycheck
-;;   :config
-;;   (flycheck-define-checker erlang-otp
-;;     "An Erlang syntax checker using the Erlang interpreter."
-;;     :command ("make" "-C" (eval (projectile-project-root)))
-;;     ;; :command ("erlc" "-o" temporary-directory "-Wall"
-;;     ;;           "-I" "../include" "-I" "../../include"
-;;     ;;           "-I" "../../../include" source)
-;;     :modes erlang-mode
-;;     :error-patterns
-;;     ((warning line-start (file-name) ":" line ": Warning:" (message) line-end)
-;;      (error line-start (file-name) ":" line ": " (message) line-end))
-;;     )
-;;   )
-
-;; (add-hook 'erlang-mode-hook
-;;           (lambda ()
-;;             (flycheck-select-checker 'erlang-otp)
-;;             (flycheck-mode)))
-(use-package indy
-  :ensure t
-  :config
-  (setq indy-rules '(
-                     (erlang-mode . (
-                                     ((and (indy--current 'indy--starts-with "end")
-                                           (indy--prev 'indy--ends-on ") ->"))
-                                      (indy--prev-tab))
-                                     ((indy--current 'indy--starts-with "end") (indy--prev-tab -1))
-                                     ((indy--prev 'indy--ends-on ") ->")       (indy--prev-tab 1))
-                                     ((indy--current 'indy--starts-with "]")   (indy--prev-tab -1))
-                                     ((indy--prev 'indy--ends-on "[")          (indy--prev-tab 1))
-                                     ((indy--prev 'indy--ends-on ",")          (indy--prev-tab))
-                                     ))
-                     )))
-
-
 (use-package ivy-erlang-complete
   :custom
   (ivy-erlang-complete-erlang-root "/usr/local/cellar/erlang/")
