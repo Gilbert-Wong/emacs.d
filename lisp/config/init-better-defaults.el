@@ -108,12 +108,11 @@
 	      )
   )
 
-(global-set-key (kbd "C-w") 'backward-kill-word)
 (use-package paredit
   :ensure t
   :bind
   (
-   ("<C-backspace>" . 'paredit-forward-slurp-sexp)
+   ("<s-backspace>" . 'paredit-forward-slurp-sexp)
    )
   :config
   (dolist (hook (list
