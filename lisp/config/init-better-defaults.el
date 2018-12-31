@@ -1,3 +1,4 @@
+
 ;;; package --- init-better-defaults
 ;;; Commentary:
 ;;; Code:
@@ -24,8 +25,8 @@
 
 ;; ansi-term
 (defun open-localhost ()
-      (interactive)
-      (ansi-term "zsh" "localhost"))
+  (interactive)
+  (ansi-term "zsh" "localhost"))
 
 (global-set-key (kbd "C-c C-t") 'open-localhostq)
 
@@ -64,20 +65,12 @@
 (add-to-list 'display-buffer-alist
              `(,(rx bos "*Flycheck errors*" eos)
                (display-buffer-reuse-window
-		display-buffer-in-side-window)
+		        display-buffer-in-side-window)
                (side            . bottom)
                (reusable-frames . visible)
                (window-height   . 0.2))
-	     )
+	         )
 
-;; (add-to-list 'display-buffer-alist
-;; 	     `(,(rx bos "*undo-tree*" eos)
-;; 	       (display-buffer-reuse-window
-;; 		display-buffer-in-side-window)
-;; 	       (side          . right)
-;; 	       (window-height . 0.2)
-;; 	       )
-;; 	     )
 
 ;; (global-aggressive-indent-mode 1)
 
@@ -94,6 +87,7 @@
     (setq super-save-auto-save-when-idle t)
     )
   )
+
 ;; (setq make-backup-files nil)
 ;; (setq auto-save-default nil)
 ;; (super-save-mode t)
@@ -104,17 +98,59 @@
   :ensure t
   :config
   (progn  (dashboard-setup-startup-hook)
-	  (setq dashboard-banner-logo-title "Gilbert Emacs")
-	  (setq dashboard-startup-banner "~/.emacs.d/avatar.png")
-	  (setq dashboard-items '((recents . 5)
-				  (bookmarks . 5)
-				  (projects . 5)
-				  ;; (agenda . 5)
-				  ))
-	  )
+	      (setq dashboard-banner-logo-title "Gilbert Emacs")
+	      (setq dashboard-startup-banner "~/.emacs.d/avatar.png")
+	      (setq dashboard-items '((recents . 5)
+				                  (bookmarks . 5)
+				                  (projects . 5)
+				                  ;; (agenda . 5)
+				                  ))
+	      )
   )
 
-(global-page-break-lines-mode)
+(global-set-key (kbd "C-w") 'backward-kill-word)
+(use-package paredit
+  :ensure t
+  :bind
+  (
+   ("<C-backspace>" . 'paredit-forward-slurp-sexp)
+   )
+  :config
+  (dolist (hook (list
+                 ;; 'c-mode-common-hook
+                 ;; 'c-mode-hook
+                 ;; 'c++-mode-hook
+                 ;; 'java-mode-hook
+                 ;; 'haskell-mode-hook
+                 'emacs-lisp-mode-hook
+                 'lisp-interaction-mode-hook
+                 'lisp-mode-hook
+                 'scheme-mode-hook
+                 ;; 'maxima-mode-hook
+                 ;; 'ielm-mode-hook
+                 'sh-mode-hook
+                 'makefile-gmake-mode-hook
+                 ;; 'php-mode-hook
+                 ;; 'python-mode-hook
+                 'js-mode-hook
+                 ;; 'go-mode-hook
+                 ;; 'qml-mode-hook
+                 ;; 'jade-mode-hook
+                 'css-mode-hook
+                 'erlang-mode
+                 ;; 'ruby-mode-hook
+                 ;; 'coffee-mode-hook
+                 ;; 'rust-mode-hook
+                 ;; 'qmake-mode-hook
+                 ;; 'lua-mode-hook
+                 ;; 'swift-mode-hook
+                 ;; 'minibuffer-inactive-mode-hook
+                 ))
+    (add-hook hook '(lambda () (paredit-mode 1)))
+    
 
-(provide 'init-better-defaults)
+    (global-page-break-lines-mode))
+  )
+
 ;;; init-better-defaults ends here
+(provide 'init-better-defaults)

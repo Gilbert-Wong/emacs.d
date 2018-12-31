@@ -69,6 +69,7 @@
 (depends-on "neotree")
 (depends-on "package-build")
 (depends-on "pallet")
+(depends-on "paredit")
 (depends-on "plantuml-mode")
 (depends-on "popup")
 (depends-on "popwin")
