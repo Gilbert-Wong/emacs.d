@@ -1,4 +1,3 @@
-
 ;;; package --- init-better-defaults
 ;;; Commentary:
 ;;; Code:
@@ -12,6 +11,9 @@
   :diminish editorconfig-mode
   :config
   (editorconfig-mode t))
+
+;; disable ring bell
+(setq ring-bell-function 'ignore)
 
 ;;$PATH
 (use-package exec-path-from-shell
