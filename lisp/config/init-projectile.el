@@ -2,19 +2,23 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq projectile-keymap-prefix (kbd "C-c C-p"))
 
-(setq projectile-enable-caching t)
+(use-package projectile
+  :ensure t
+  :bind
+  (("C-c p f" . 'counsel-projectile-find-file)
+   ("C-c p p" . 'counsel-projectile-switch-project)
+   ("C-c p a" . 'counsel-projectile-ag)
+   ("C-c p r" . 'counsel-projectile-rg)
+   ("C-c p g" . 'counsel-projectile-grep)
+   )
+  :config
+  (setq projectile-enable-caching t)
+  :init
+  (projectile-mode t)
+  )
 
-(global-set-key (kbd "C-c p f") 'counsel-projectile-find-file)
-
-(global-set-key (kbd "C-c p p") 'counsel-projectile-switch-project)
-
-(global-set-key (kbd "C-c p a") 'counsel-projectile-ag)
-
-(global-set-key (kbd "C-c p r") 'counsel-projectile-rg)
-
-(global-set-key (kbd "C-c p g") 'counsel-projectile-grep)
+;; (setq projectile-keymap-prefix (kbd "C-c C-p"))
 
 (provide 'init-projectile)
 ;;; Init-projectile.el ends here
