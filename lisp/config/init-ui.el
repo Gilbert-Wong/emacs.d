@@ -20,7 +20,8 @@
 (use-package solarized-theme
   :ensure t
   :init
-   (load-theme 'solarized-light t)
+  ;; (load-theme 'solarized-light t)
+     (load-theme 'gruvbox-dark-soft t)
   )
 
 ;; set cursor color in dark theme

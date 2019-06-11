@@ -29,6 +29,7 @@
 (depends-on "diminish")
 (depends-on "direx")
 (depends-on "distel-completion-lib")
+(depends-on "dracula-theme")
 (depends-on "editorconfig")
 (depends-on "emmet-mode")
 (depends-on "erlang")
