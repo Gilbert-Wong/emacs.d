@@ -20,7 +20,13 @@
   :config
   (exec-path-from-shell-initialize)
   :init
-  (setq exec-path-from-shell-variables '("PATH" "MANPATH" "GOROOT" "GOPATH" "EDITOR" "PYTHONPATH"))
+  (setq exec-path-from-shell-variables '("PATH"
+                                         "MANPATH"
+                                         "GOROOT"
+                                         "GOPATH"
+                                         "EDITOR"
+                                         "PYTHONPATH"))
+  (setenv "GOPATH" "/Users/gilbertwong/Development/gocode")
   (setq exec-path-from-shell-check-startup-files nil)
   (setq exec-path-from-shell-arguments '("-l" ))
   )

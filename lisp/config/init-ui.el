@@ -16,12 +16,12 @@
 
 (use-package popwin)
 
-
-(use-package solarized-theme
+(use-package gruvbox-theme
   :ensure t
-  :init
+  :config
   ;; (load-theme 'solarized-light t)
-     (load-theme 'gruvbox-dark-soft t)
+  ;; (load-theme 'dracula t)
+  (load-theme 'gruvbox-dark-medium t)
   )
 
 ;; set cursor color in dark theme
@@ -44,7 +44,7 @@
 
 ;; (setq default-frame-scroll-bars 0)
 ;; font config
-(set-frame-font "Inziu Iosevka SC 18")
+(set-frame-font "Inziu Iosevka SC 20")
 ;;(setq default-frame-alist '((font . "Inziu Iosevka SC 16")))
 (add-to-list 'default-frame-alist '(vertical-scroll-bars . nil))
 (add-to-list 'default-frame-alist '(font . "Inziu Iosevka SC 16"))
