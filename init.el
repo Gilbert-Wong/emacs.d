@@ -30,6 +30,7 @@
 (require 'init-scheme)
 (require 'init-helm)
 (require 'init-editorconfig)
+(require 'init-lsp)
 (require 'init-plantuml)
 (require 'init-org)
 (require 'init-encoding)
