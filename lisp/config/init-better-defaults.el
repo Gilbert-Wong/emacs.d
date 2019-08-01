@@ -102,19 +102,7 @@
 ;; (setq super-save-auto-save-when-idle t)
 
 
-(use-package dashboard
-  :ensure t
-  :config
-  (progn  (dashboard-setup-startup-hook)
-	      (setq dashboard-banner-logo-title "Gilbert Emacs")
-	      (setq dashboard-startup-banner "~/.emacs.d/avatar.png")
-	      (setq dashboard-items '((recents . 5)
-				                  (bookmarks . 5)
-				                  (projects . 5)
-				                  ;; (agenda . 5)
-				                  ))
-	      )
-  )
+
 
 (use-package paredit
   :ensure t

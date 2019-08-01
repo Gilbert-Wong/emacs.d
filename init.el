@@ -10,9 +10,9 @@
 (add-to-list 'load-path (expand-file-name "lisp/config" user-emacs-directory))
 
 (require 'init-package)
+(require 'init-ui)
 (require 'init-better-defaults)
 (require 'init-flyspell)
-(require 'init-ui)
 (require 'init-misc)
 (require 'init-haskell)
 (require 'init-ivy)
