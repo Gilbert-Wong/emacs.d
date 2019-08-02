@@ -6,14 +6,27 @@
 
 (require 'erlang-start)
 
+;; (use-package lsp-mode
+;;   :config
+;;   (add-hook 'erlang-mode-hook #'lsp)
+;;   )
 (use-package ivy-erlang-complete
   :custom
   (ivy-erlang-complete-erlang-root "/usr/local/cellar/erlang/")
   :config
-  (progn (add-to-list 'auto-mode-alist '("rebar\\.config$" . erlang-mode))
-	     (add-to-list 'auto-mode-alist '("relx\\.config$" . erlang-mode))
-	     (add-to-list 'auto-mode-alist '("system\\.config$" . erlang-mode))
-	     (add-to-list 'auto-mode-alist '("\\.app\\.src$" . erlang-mode)))
+  (progn
+    (add-hook 'erlang-mode-hook
+              '(lambda ()
+                 (set (make-local-variable 'company-backends)
+                      '((company-erlang company-yasnippet))
+                      )
+                 (set (make-local-variable 'company-minimum-prefix-length)
+                      3)
+                 ))
+    (add-to-list 'auto-mode-alist '("rebar\\.config$" . erlang-mode))
+    (add-to-list 'auto-mode-alist '("relx\\.config$" . erlang-mode))
+    (add-to-list 'auto-mode-alist '("system\\.config$" . erlang-mode))
+    (add-to-list 'auto-mode-alist '("\\.app\\.src$" . erlang-mode)))
   :bind
   (
    ("C-c e s" . 'ivy-erlang-complete-find-spec)
@@ -25,7 +38,6 @@
   :init
   (add-hook 'erlang-mode-hook #'ivy-erlang-complete-init)
   (add-hook 'after-save-hook #'ivy-erlang-complete-reparse)
-  (add-hook 'erlang-mode-hook #'company-erlang-init)
   )
 
 (provide 'init-erlang)

@@ -147,5 +147,10 @@
     (global-page-break-lines-mode))
   )
 
+;; yasnippet config
+(require 'yasnippet)
+(yas-global-mode 1)
+
+
 ;;; init-better-defaults ends here
 (provide 'init-better-defaults)
