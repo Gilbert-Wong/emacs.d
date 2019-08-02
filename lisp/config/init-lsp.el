@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package lsp-mode
-  ;; :hook (XXX-mode . lsp)
+  :hook (c++-mode . lsp)
   :commands lsp)
 
 ;; optionally
