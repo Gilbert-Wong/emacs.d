@@ -18,6 +18,7 @@
 (require 'init-projectile)
 (require 'init-company)
 (require 'init-erlang)
+(require 'init-elixir)
 (require 'init-linum)
 (require 'init-git)
 (require 'init-github)

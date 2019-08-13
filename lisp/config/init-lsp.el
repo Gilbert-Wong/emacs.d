@@ -4,6 +4,8 @@
 
 (use-package lsp-mode
   :hook (c++-mode . lsp)
+  ;; :config
+  ;; (setq lsp-erlang-server-install-dir "~/.cache/erlang_ls")
   :commands lsp)
 
 ;; optionally
