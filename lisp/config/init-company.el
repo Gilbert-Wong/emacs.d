@@ -31,5 +31,17 @@
                       company-dabbrev))))
   )
 
+(use-package company-box
+  :diminish company-box-mode
+  :hook (company-mode . company-box-mode))
+
+(use-package company-lsp
+  :after (company lsp-mode)
+  :config
+  (push 'company-lsp company-backends)
+  (pu)
+  :commands company-lsp
+  :ensure t)
+
 (provide 'init-company)
 ;;; init-company.el ends here

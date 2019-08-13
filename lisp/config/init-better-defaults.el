@@ -105,6 +105,7 @@
 
 
 (use-package paredit
+  :diminish paredit-mode
   :ensure t
   :bind
   (

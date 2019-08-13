@@ -3,14 +3,23 @@
 ;;; Code:
 
 (use-package lsp-mode
-  :hook (c++-mode . lsp)
-  ;; :config
-  ;; (setq lsp-erlang-server-install-dir "~/.cache/erlang_ls")
-  :commands lsp)
+  :hook ((c++-mode . lsp)
+         (elixir-mode . lsp))
+  :ensure t
+  :commands lsp
+  :init
+  (add-to-list 'exec-path "~/.cache/elixir-ls/release")
+  )
 
 ;; optionally
-(use-package lsp-ui :commands lsp-ui-mode)
-(use-package company-lsp :commands company-lsp)
+(use-package lsp-ui
+  :after (lsp-mode)
+  :ensure t
+  :commands lsp-ui-mode)
+
+(dap-ui-mode)
+(dap-mode)
+
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 ;; optionally if you want to use debugger

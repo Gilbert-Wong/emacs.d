@@ -3,8 +3,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-box-icons-alist (quote company-box-icons-all-the-icons))
  '(company-go-show-annotation t)
  '(company-idle-delay 0.1)
+ '(company-quickhelp-use-propertized-text t)
  '(company-selection-wrap-around t)
  '(custom-safe-themes
    (quote
@@ -20,7 +22,7 @@
  '(neo-window-width 30)
  '(package-selected-packages
    (quote
-    (alchemist erlang-mode yasnippet-snippets ## adaptive-wrap lsp-mode treemacs lsp-treemacs helm-lsp dap-mode lsp-ui company-lsp cquery company-go go-mode dracula-theme haskell-mode transient reformatter async f page-break-lines ht dhall-mode hindent intero request request-deferred indy cask helm-core indy-mode geiser with-editor autothemer magit-popup package-build wakatime-mode company dash git-commit helm flycheck-plantuml plantuml-mode paredit helm-make color-rg distel-completion-lib ansi-term imenu-list flycheck ghub ivy solarized hungry-delete wrangler erlang multiple-cursors diminish flymake-cursor gist youdao-dictionary evil-nerd-commenter dashboard window-numbering counsel-projectile company-erlang ivy-erlang-complete find-file-in-project counsel-gtags swiper zeal-at-point yasnippet which-key web-mode use-package undo-tree super-save solarized-theme smartparens projectile popwin pallet neotree mode-icons markdown-mode magit js2-mode init-open-recentf iedit highlight-parentheses gruvbox-theme git-gutter ggtags fzf flycheck-ycmd flycheck-tip flycheck-cask expand-region exec-path-from-shell emmet-mode editorconfig direx dash-at-point crux counsel-osx-app counsel company-ycmd company-web company-distel company-c-headers bm avy all-the-icons aggressive-indent ag ace-jump-mode)))
+    (company-box company-quickhelp alchemist erlang-mode yasnippet-snippets ## adaptive-wrap lsp-mode treemacs lsp-treemacs helm-lsp dap-mode lsp-ui company-lsp cquery company-go go-mode dracula-theme haskell-mode transient reformatter async f page-break-lines ht dhall-mode hindent intero request request-deferred indy cask helm-core indy-mode geiser with-editor autothemer magit-popup package-build wakatime-mode company dash git-commit helm flycheck-plantuml plantuml-mode paredit helm-make color-rg distel-completion-lib ansi-term imenu-list flycheck ghub ivy solarized hungry-delete wrangler erlang multiple-cursors diminish flymake-cursor gist youdao-dictionary evil-nerd-commenter dashboard window-numbering counsel-projectile company-erlang ivy-erlang-complete find-file-in-project counsel-gtags swiper zeal-at-point yasnippet which-key web-mode use-package undo-tree super-save solarized-theme smartparens projectile popwin pallet neotree mode-icons markdown-mode magit js2-mode init-open-recentf iedit highlight-parentheses gruvbox-theme git-gutter ggtags fzf flycheck-ycmd flycheck-tip flycheck-cask expand-region exec-path-from-shell emmet-mode editorconfig direx dash-at-point crux counsel-osx-app counsel company-ycmd company-web company-distel company-c-headers bm avy all-the-icons aggressive-indent ag ace-jump-mode)))
  '(plantuml-jar-path "/usr/local/Cellar/plantuml/1.2018.10/libexec/plantuml.jar")
  '(projectile-dynamic-mode-line nil)
  '(safe-local-variable-values (quote ((allout-layout . t)))))
@@ -29,4 +31,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(company-box-candidate ((t (:foreground "white")))))

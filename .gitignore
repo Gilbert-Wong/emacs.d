@@ -24,4 +24,4 @@ eshell/
 url/
 transient/
 viper
-.lsp-session*
+.lsp-session-v1

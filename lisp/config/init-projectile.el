@@ -4,6 +4,7 @@
 
 
 (use-package projectile
+  :diminish projectile-mode
   :ensure t
   :bind
   (("C-c p f" . 'counsel-projectile-find-file)
