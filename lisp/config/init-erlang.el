@@ -29,7 +29,7 @@
     (add-to-list 'auto-mode-alist '("\\.app\\.src$" . erlang-mode)))
   :bind
   (
-   ("M-/" . 'ivy-erlang-complete)
+   ;; ("M-/" . 'ivy-erlang-complete)
    ("C-c d p" . 'dash-at-point)
    ("C-c e s" . 'ivy-erlang-complete-find-spec)
    ("C-c e f" . 'ivy-erlang-complete-find-file)
