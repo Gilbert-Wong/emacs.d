@@ -38,6 +38,8 @@
 
 (global-set-key (kbd "C-c C-t") 'open-localhostq)
 
+(global-set-key (kbd "<s-return>") 'toggle-frame-fullscreen)
+
 
 ;; imenu-list
 (use-package imenu-list
@@ -62,8 +64,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (use-package flycheck
-  :config
-  (global-flycheck-mode t))
+  :hook (prog-mode . flycheck-mode))
 
 
 (smartparens-global-mode t)

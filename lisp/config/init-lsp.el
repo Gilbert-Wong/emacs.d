@@ -7,6 +7,7 @@
          (elixir-mode . lsp))
   :ensure t
   :commands lsp
+  :config (require 'lsp-clients)
   :init
   (add-to-list 'exec-path "~/.cache/elixir-ls/release")
   )

@@ -19,6 +19,7 @@
 (require 'init-company)
 (require 'init-erlang)
 (require 'init-elixir)
+(require 'init-rust)
 (require 'init-linum)
 (require 'init-git)
 (require 'init-github)

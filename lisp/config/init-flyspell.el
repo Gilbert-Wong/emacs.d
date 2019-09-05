@@ -8,7 +8,7 @@
   :diminish flyspell-mode
   :defer t
   :bind
-  (("C-;" . flyspell-mode))
+  (("C-:" . flyspell-mode))
   )
 
 (provide 'init-flyspell)
