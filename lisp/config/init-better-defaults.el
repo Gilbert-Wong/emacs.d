@@ -153,6 +153,9 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
+;; protobuf mode
+(require 'protobuf-mode)
 
 ;;; init-better-defaults ends here
 (provide 'init-better-defaults)
+;;; init-better-defaults.el ends here

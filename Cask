@@ -94,6 +94,7 @@
 (depends-on "popup")
 (depends-on "popwin")
 (depends-on "projectile")
+(depends-on "protobuf-mode")
 (depends-on "reformatter")
 (depends-on "request")
 (depends-on "request-deferred")

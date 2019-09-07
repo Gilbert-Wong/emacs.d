@@ -1,4 +1,4 @@
-;;; package --- init-erlang
+;;; package --- init-bookmark
 ;;; Commentary:
 ;;; Code:
 
