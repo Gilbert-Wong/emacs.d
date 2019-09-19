@@ -22,6 +22,7 @@
 (require 'init-rust)
 (require 'init-linum)
 (require 'init-git)
+(require 'init-go)
 (require 'init-github)
 (require 'init-dictionary)
 (require 'init-bookmark)
@@ -35,6 +36,7 @@
 (require 'init-plantuml)
 (require 'init-org)
 (require 'init-encoding)
+(require 'init-conf)
 
 (when (require 'time-date nil t)
   (message "Emacs startup time: %f seconds."

@@ -6,7 +6,7 @@
 (use-package ivy-erlang-complete
   :custom
   (ivy-erlang-complete-erlang-root "/usr/local/cellar/erlang/")
-  :hook (erlang-mode . lsp)
+  ;; :hook (erlang-mode . lsp)
   :config
   (progn
     ;; (add-hook 'erlang-mode-hook
