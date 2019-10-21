@@ -49,7 +49,6 @@
   (imenu-list-auto-resize t)
   )
 
-
 ;; hungry-delete
 (use-package hungry-delete
   :diminish hungry-delete-mode
@@ -102,16 +101,14 @@
 ;; (super-save-mode t)
 ;; (setq super-save-auto-save-when-idle t)
 
-
-
+(global-set-key (kbd "M-p") 'paredit-mode)
 
 (use-package paredit
   :diminish paredit-mode
   :ensure t
   :bind
-  (
-   ("<s-backspace>" . 'paredit-forward-slurp-sexp)
-   )
+  ("<s-backspace>" . 'paredit-forward-slurp-sexp)
+  
   :config
   (dolist (hook (list
                  ;; 'c-mode-common-hook
@@ -155,6 +152,10 @@
 
 ;; protobuf mode
 (require 'protobuf-mode)
+
+;; fix 'Listing directory failed but `access-file` worked'
+;; (setq ls-lisp-use-insert-directory-program nil)
+;; (require 'ls-lisp)
 
 ;;; init-better-defaults ends here
 (provide 'init-better-defaults)

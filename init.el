@@ -22,7 +22,7 @@
 (require 'init-rust)
 (require 'init-linum)
 (require 'init-git)
-(require 'init-go)
+;; (require 'init-go)
 (require 'init-github)
 (require 'init-dictionary)
 (require 'init-bookmark)
