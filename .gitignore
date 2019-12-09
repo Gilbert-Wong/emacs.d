@@ -13,6 +13,9 @@
 # elpa
 elpa/
 
+# cache
+cache/
+
 # other file
 .DS_Store
 var/
