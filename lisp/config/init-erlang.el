@@ -37,9 +37,15 @@
 ;;   )
 
 (use-package erlang
+  :custom
+  (lsp-erlang-server-path "/Users/gilbertwong/.cache/erlang_ls/_build/default/bin/erlang_ls")
+  :hook (erlang-mode . lsp)
   :config
-  (setq lsp-erlang-server-path "/Users/gilbertwong/.cache/erlang_ls/_build/default/bin/erlang_ls")
   (add-hook 'erlang-mode-hook #'lsp)
+  (add-to-list 'auto-mode-alist '("rebar\\.config$" . erlang-mode))
+  (add-to-list 'auto-mode-alist '("relx\\.config$" . erlang-mode))
+  (add-to-list 'auto-mode-alist '("system\\.config$" . erlang-mode))
+  (add-to-list 'auto-mode-alist '("\\.app\\.src$" . erlang-mode))
   (require 'erlang-start)
   )
 

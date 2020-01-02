@@ -4,7 +4,8 @@
 
 (use-package lsp-mode
   :hook ((c++-mode . lsp)
-         (elixir-mode . lsp))
+         (elixir-mode . lsp)
+         (lsp-origami-mode . lsp))
   :ensure t
   :commands lsp
   :config (require 'lsp-clients)

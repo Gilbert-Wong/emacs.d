@@ -81,6 +81,7 @@
 (depends-on "ivy-erlang-complete")
 (depends-on "js2-mode")
 (depends-on "lsp-mode")
+(depends-on "lsp-origami")
 (depends-on "lsp-treemacs")
 (depends-on "lsp-ui")
 (depends-on "lv")
