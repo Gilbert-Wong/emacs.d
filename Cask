@@ -1,6 +1,6 @@
-(source gnu)
-(source melpa)
-(source org)
+(source "gnu" "http://elpa.emacs-china.org/gnu/")
+(source "melpa" "http://elpa.emacs-china.org/melpa/")
+(source "org" "http://elpa.emacs-china.org/org/")
 
 (depends-on "ace-jump-mode")
 (depends-on "ace-window")
@@ -77,7 +77,6 @@
 (depends-on "init-open-recentf")
 (depends-on "intero")
 (depends-on "ivy")
-(depends-on "ivy-erlang-complete" :git "https://github.com/gilbertwong96/ivy-erlang-complete.git" :branch "master")
 (depends-on "ivy-erlang-complete")
 (depends-on "js2-mode")
 (depends-on "lsp-mode")

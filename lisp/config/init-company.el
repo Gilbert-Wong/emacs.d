@@ -40,7 +40,6 @@
   :after (company lsp-mode)
   :config
   (push 'company-lsp company-backends)
-  (pu)
   :commands company-lsp
   :ensure t)
 
