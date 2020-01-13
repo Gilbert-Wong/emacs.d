@@ -67,6 +67,7 @@
 (depends-on "helm-core")
 (depends-on "helm-lsp")
 (depends-on "helm-make")
+(depends-on "helm-org")
 (depends-on "highlight-parentheses")
 (depends-on "hindent")
 (depends-on "ht")
