@@ -38,7 +38,7 @@
 
 (use-package erlang
   :custom
-  (lsp-erlang-server-path "/Users/gilbertwong/.cache/erlang_ls/_build/default/bin/erlang_ls")
+  (lsp-erlang-server-path "/Users/gilbertwong/.cache/erlang_ls/_build/debug/bin/erlang_ls")
   :hook (erlang-mode . lsp)
   :config
   (add-hook 'erlang-mode-hook #'lsp)

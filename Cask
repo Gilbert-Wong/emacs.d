@@ -95,6 +95,7 @@
 (depends-on "multiple-cursors")
 (depends-on "neotree")
 (depends-on "package-build")
+(depends-on "page-break-lines")
 (depends-on "pallet")
 (depends-on "paredit")
 (depends-on "plantuml-mode")
