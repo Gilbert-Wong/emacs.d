@@ -7,14 +7,16 @@
 ;; set package manage tool
 ;; (if (eq system-type 'darwin)
 ;;    (require 'cask)
-(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(require 'cask "~/.cask/cask.el")
+(setq after-init-time t)
 (cask-initialize)
+(setq after-init-time nil)
 (setq use-package-always-ensure t)
 
 ;; cask manager
-(use-package pallet
-	     :config
-	     (pallet-mode t))
+;; (use-package pallet
+;; 	     :config
+;; 	     (pallet-mode t))
 
 (provide 'init-package)
 ;;; init-package.el ends here
