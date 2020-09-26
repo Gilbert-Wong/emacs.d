@@ -8,10 +8,9 @@
          (lsp-origami-mode . lsp))
   :ensure t
   :commands lsp
-  :config (require 'lsp-clients)
+  :config (require 'lsp)
   :init
   (add-to-list 'exec-path "~/.cache/elixir-ls/release")
-  
   )
 
 ;; optionally

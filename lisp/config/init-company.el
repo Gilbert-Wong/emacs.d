@@ -21,7 +21,9 @@
                                    company-gtags
                                    company-etags
                                    company-eclim
-                                   company-elisp))
+                                   company-elisp
+                                   company-capf
+                                  ))
 
   (add-hook 'emacs-lisp-hook
 	        (lambda()
@@ -35,13 +37,6 @@
 (use-package company-box
   :diminish company-box-mode
   :hook (company-mode . company-box-mode))
-
-(use-package company-lsp
-  :after (company lsp-mode)
-  :config
-  (push 'company-lsp company-backends)
-  :commands company-lsp
-  :ensure t)
 
 (provide 'init-company)
 ;;; init-company.el ends here
