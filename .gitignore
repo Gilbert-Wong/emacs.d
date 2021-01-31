@@ -15,8 +15,10 @@ elpa/
 
 # cache
 cache/
+session.*
 
 # other file
+*.zsh
 .DS_Store
 var/
 *bookmarks*
