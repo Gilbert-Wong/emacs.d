@@ -32,3 +32,4 @@ viper
 .lsp-session-v1
 .dap-breakpoints
 .cache/
+*.log

@@ -18,9 +18,6 @@
  '(git-gutter:modified-sign " ")
  '(git-gutter:update-interval 2)
  '(imenu-list-auto-resize t)
- '(ivy-erlang-complete--setup-flycheck nil)
- '(ivy-erlang-complete-erlang-root "/usr/local/cellar/erlang/" nil nil "Customized with use-package ivy-erlang-complete")
- '(ivy-erlang-complete-ignore-dirs '(".git"))
  '(lsp-erlang-server-path
    "/Users/gilbertwong/.cache/erlang_ls/_build/default/bin/erlang_ls")
  '(neo-window-fixed-size nil)
