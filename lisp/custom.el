@@ -22,7 +22,7 @@
  '(ivy-erlang-complete-erlang-root "/usr/local/cellar/erlang/" nil nil "Customized with use-package ivy-erlang-complete")
  '(ivy-erlang-complete-ignore-dirs '(".git"))
  '(lsp-erlang-server-path
-   "/Users/gilbertwong/.cache/erlang_ls/_build/debug/bin/erlang_ls" t)
+   "/Users/gilbertwong/.cache/erlang_ls/_build/default/bin/erlang_ls")
  '(neo-window-fixed-size nil)
  '(neo-window-width 30)
  '(package-selected-packages
@@ -35,4 +35,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-box-candidate ((t (:foreground "white"))) t))
+ '(company-tooltip ((t (:foreground "white")))))

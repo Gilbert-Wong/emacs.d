@@ -13,7 +13,6 @@
 (require 'init-better-defaults)
 (require 'init-flyspell)
 (require 'init-misc)
-(require 'init-haskell)
 (require 'init-c)
 (require 'init-ivy)
 (require 'init-projectile)

@@ -48,10 +48,10 @@
 (setq inhibit-startup-message t)
 ;; (setq default-frame-scroll-bars 0)
 ;; font config
-(set-frame-font "Iosevka 10")
+(set-frame-font "Iosevka 12")
 ;;(setq default-frame-alist '((font . "Inziu Iosevka SC 16")))
 (add-to-list 'default-frame-alist '(vertical-scroll-bars . nil))
-(add-to-list 'default-frame-alist '(font . "Iosevka 10"))
+(add-to-list 'default-frame-alist '(font . "Iosevka 12"))
 ;; (font . "Inziu Iosevka SC 16")
 
 (use-package dashboard
