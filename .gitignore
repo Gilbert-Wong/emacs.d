@@ -33,3 +33,10 @@ viper
 .dap-breakpoints
 .cache/
 *.log
+elpa-*/
+.session
+*.sqlite
+.uptimes.el
+.emacs.desktop*
+history
+org-clock-save.el
